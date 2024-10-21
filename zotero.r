@@ -1,6 +1,6 @@
 pacman::p_load(dplyr, ggplot2, readr, lubridate)
 
-read_csv("bibliothek.csv", show_col_types = FALSE) |>
+read_csv("library.csv", show_col_types = FALSE) |>
     mutate(`Date Added` = as.Date(`Date Added`)) |>
     arrange(`Date Added`) |>
     summarise(n = n(),
